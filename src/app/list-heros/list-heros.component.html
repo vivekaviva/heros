@@ -1,0 +1,32 @@
+<div *ngIf="showToggle" >project works!
+    {{name}}
+</div> 
+ <input [(ngModel)]="name" value="name"/> 
+<button (click)="toggle()">Toggle</button>
+<p appShow>Highlight me!</p>
+<p appshow="display">
+    Display using the directive
+</p>
+
+<div class="container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let list of userList">
+                <td>{{list.first_name}}</td>
+                <td>{{list.last_name}}</td>
+                <td>{{list.email}}</td>
+               </tr>
+            </tbody>
+        </table>
+</div>
+
+<button type="button" routerLink="/orders">Orders</button>
+<button type="button" routerLink="/user">User</button>
+
